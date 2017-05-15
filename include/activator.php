@@ -1,0 +1,55 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
+<?php
+global $wpdb;
+$wpdb->wow_signup = $wpdb->prefix . 'wow_signup';
+require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+$sql = "CREATE TABLE " . $wpdb->wow_signup . " (
+  id mediumint(9) NOT NULL AUTO_INCREMENT,
+  title VARCHAR(200) NOT NULL,
+  type_signup TEXT,
+  number_invites TEXT,
+  number_taken TEXT,
+  first_text TEXT,
+  second_text TEXT,
+  confirmation_text TEXT,
+  button_text TEXT,
+  share_text TEXT,
+  twitter_text TEXT,
+  share_link TEXT,
+  specify_anchor TEXT,
+  referrals TEXT,
+  block_user TEXT,
+  directly TEXT,
+  custom_share_text TEXT,
+  facebook_share_text TEXT,
+  fb_app_id TEXT, 
+  mails TEXT,
+  position TEXT,
+  alignment TEXT,
+  first_text_size TEXT,
+  second_text_size TEXT,
+  link_size TEXT,
+  confirmation_first_size TEXT,
+  confirmation_second_size TEXT,
+  confirmation_text_size TEXT,
+  button_text_size TEXT,
+  first_text_color TEXT,
+  second_text_color TEXT,
+  confirmation_first_text_color TEXT,
+  confirmation_second_text_color TEXT,
+  confirmation_text_color TEXT,
+  button_text_color TEXT,
+  button_color TEXT,
+  button_hover_color TEXT,
+  button_disabled_color TEXT,
+  placeholder_text TEXT,
+  integration TEXT,
+  choosservice TEXT,
+  mailchimp_api TEXT,
+  mailchimp_list TEXT,
+  getresponse_api TEXT,
+  getresponse_list TEXT,
+  UNIQUE KEY id (id)
+) DEFAULT CHARSET=utf8;";
+dbDelta($sql);
+update_option( 'data_wow_signup', '1.1' );

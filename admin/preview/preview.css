@@ -1,0 +1,100 @@
+ #wow-preview-overlay{ top: 0; right: 0; bottom: 0; left: 0; z-index: 999999; background-color: rgba(0, 0, 0, 0.7); position: fixed; cursor: default; display: none; width: 100%; height: 100%; overflow: auto; } 
+#wow-preview-overclose { top: 0; right: 0; bottom: 0; left: 0; z-index: 999999; cursor: default; width: 100%; height: 100%; } 
+#wow-preview-window{
+	width:390px;
+	padding:10px; 
+	border: 0px solid #eeeeee; 
+	z-index:999999; 
+	position: fixed; 
+	top:10%;
+	left:0%;
+	right:0%;
+	border-radius:5px; 
+	margin: 0 auto; 
+	opacity: 1;
+	height: auto;
+background: #ffffff; 
+box-sizing: border-box;
+}
+  #wow-preview-close { position: absolute; top: -10px; right: -10px; border: 1px solid #ffffff; -webkit-border-radius: 15px; -moz-border-radius: 15px; -ms-border-radius: 15px; -o-border-radius: 15px; border-radius: 15px; background-color: #000000; font-size: 14px; color: #ffffff; padding:5px 10px; font-weight: bold; cursor:pointer; display: none; } 
+
+@media only screen and (max-width: 1024px){
+#wow-preview-window {
+    max-width: 85%;
+}
+}
+
+.submit-right {
+	display: block;
+	top: 80%;
+	right: 0px;
+	position: fixed;	
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+	-webkit-transform-origin: right top 0;
+	-moz-transform-origin: right top 0;
+	-o-transform-origin: right top 0;
+	-moz-transform-origin: right top 0;
+	transform-origin: right top 0;
+	text-align: center;
+}
+.sub {
+	width: 128px;
+	height: 32px;
+	background: #1f9ef8;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	line-height: 32px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	font-size: 14px;
+	border: 0px;
+	cursor: pointer;
+	margin: 0px;
+	padding: 0px;
+	transition-timing-function: ease-in-out;
+	transition-duration: .05s;
+	transition-property: all;
+}
+.sub:hover, .sub:active {
+	background: #128be0;
+}
+
+.preview {
+	width: 128px;
+	height: 32px;
+	background: #797979;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	line-height: 32px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	font-size: 14px;
+	border: 0px;
+	cursor: pointer;
+	margin: 0px;
+	padding: 0px;
+	transition-timing-function: ease-in-out;
+	transition-duration: .05s;
+	transition-property: all;
+	margin-left: 2px;
+}
+.preview:hover, .preview:active {
+	background: #656565;
+}
+
+.submit-bottom {
+	display: block;	
+	width:260px;
+	
+}
+@media only screen and (max-width: 1024px){
+#wow-modal-3 {
+    max-width: 85%;
+}
+}
